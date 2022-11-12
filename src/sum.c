@@ -1,4 +1,4 @@
-#include "sum.h"
+//#include "sum.h"
 
 #include<stdio.h>
 #include<assert.h>
@@ -18,12 +18,22 @@ int sum (int n)
 /* Sum integers 1 to n */
 int sumtail (int n, int total)
 {
-    return 0;
+  assert(n>=0);
+   if (n<1) {
+    return total;
+   }
+  return sumtail(n-1,total+n);
 }
 
 /* Sum integers 1 to n */
 int sumwhile (int n)
 {
-  return 0;
+  assert (n >= 1);
+  int sum = 0;
+  int counter = 0;
+  while (counter<n) {
+    sum += n-counter;
+    counter++;
+  }
+  return sum;
 }
-
