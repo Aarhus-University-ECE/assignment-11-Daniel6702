@@ -1,4 +1,4 @@
-//#include "sum.h"
+#include "sum.h"
 
 #include<stdio.h>
 #include<assert.h>
